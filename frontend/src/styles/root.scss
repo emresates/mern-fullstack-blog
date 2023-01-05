@@ -21,21 +21,6 @@ body {
   background-color: $color1;
 }
 
-@mixin flex($content, $items: none, $text: none) {
-  display: flex;
-  justify-content: $content;
-  align-items: $items;
-  text-align: $text;
-}
-
-@mixin absolute($top: none, $right: none, $bottom: none, $left: none) {
-  position: absolute;
-  top: $top;
-  right: $right;
-  bottom: $bottom;
-  left: $left;
-}
-
 @font-face {
   font-family: 'Blanka';
   src: url('../font/Blanka.woff') format('woff');

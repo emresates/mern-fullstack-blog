@@ -12,6 +12,7 @@
   justify-content: space-between;
   font-family: 'Quantity';
   user-select: none;
+  z-index: 10;
 
   &-left,
   &-right {

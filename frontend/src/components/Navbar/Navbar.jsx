@@ -15,7 +15,6 @@ function Navbar() {
         <div className="navbar-left-icons">
           <i className="fa-brands fa-facebook-f"></i>
           <i className="fa-brands fa-twitter"></i>
-          <i className="fa-brands fa-google"></i>
           <i className="fa-brands fa-pinterest-p"></i>
           <i className="fa-brands fa-instagram"></i>
         </div>
