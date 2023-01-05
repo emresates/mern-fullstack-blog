@@ -1,0 +1,63 @@
+.navbar {
+  width: 95%;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  margin: auto;
+  border-radius: 0 0 30px 30px;
+  background-color: $color3;
+  color: $color5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Quantity';
+
+  &-left,
+  &-right {
+    flex: 1;
+  }
+
+  &-center {
+    flex: 2;
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+  }
+
+  &-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.5rem 1rem;
+
+    &-profile {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+    &-icons {
+      display: flex;
+      gap: 20px;
+      font-size: 1.4rem;
+    }
+  }
+
+  &-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: black;
+  }
+}

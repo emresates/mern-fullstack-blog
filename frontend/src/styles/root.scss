@@ -1,0 +1,47 @@
+$color1: #eae7dc;
+$color2: #eee2dc;
+$color3: #bab2b5;
+$color4: #e98074;
+$color5: #e85a4f;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-size: 100%;
+  outline: none;
+  border: none;
+  resize: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $color1;
+}
+
+@mixin flex($content, $items: none, $text: none) {
+  display: flex;
+  justify-content: $content;
+  align-items: $items;
+  text-align: $text;
+}
+
+@mixin absolute($top: none, $right: none, $bottom: none, $left: none) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@font-face {
+  font-family: 'Blanka';
+  src: url('../font/Blanka.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Quantity';
+  src: url('../font/Quantify.woff') format('woff');
+}
