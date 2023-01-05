@@ -13,12 +13,13 @@
       font-size: 8rem;
       color: $color5;
       background: linear-gradient(180deg, $color5 70%, $color1 50%);
-      -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     &-slogan {
       position: absolute;
+      text-align: center;
       top: 30%;
       font-size: 4rem;
       color: $color2;
@@ -30,5 +31,31 @@
     height: 70vh;
     object-fit: cover;
     margin-top: 5rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .header {
+    &-title {
+      &-slogan {
+        font-size: 3rem;
+      }
+    }
+    img {
+      height: 50vh;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .header {
+    &-title {
+      &-main {
+        font-size: 6rem;
+        top: 0;
+      }
+      &-slogan {
+        font-size: 2rem;
+      }
+    }
   }
 }
