@@ -1,0 +1,34 @@
+.header {
+  position: relative;
+  user-select: none;
+  &-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Blanka';
+
+    &-main {
+      position: absolute;
+      top: -2rem;
+      font-size: 8rem;
+      color: $color5;
+      background: linear-gradient(180deg, $color5 70%, $color1 50%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &-slogan {
+      position: absolute;
+      top: 30%;
+      font-size: 4rem;
+      color: $color2;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    margin-top: 5rem;
+  }
+}

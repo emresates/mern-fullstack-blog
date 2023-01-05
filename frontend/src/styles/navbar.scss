@@ -11,6 +11,7 @@
   align-items: center;
   justify-content: space-between;
   font-family: 'Quantity';
+  user-select: none;
 
   &-left,
   &-right {
@@ -26,6 +27,15 @@
       display: flex;
       align-items: center;
       justify-content: space-evenly;
+
+      .nav-item {
+        color: $color5;
+        transition: 0.2s;
+
+        &:hover {
+          color: $color2;
+        }
+      }
     }
   }
 
@@ -47,8 +57,10 @@
       }
     }
     &-icons {
+      width: 50%;
       display: flex;
-      gap: 20px;
+      align-items: center;
+      justify-content: space-evenly;
       font-size: 1.4rem;
     }
   }
@@ -58,6 +70,69 @@
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-    color: black;
+    .site-name {
+      color: black;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .navbar {
+    height: 160px;
+    flex-direction: column-reverse;
+
+    &-left {
+      width: 100%;
+
+      &-profile {
+        width: 20%;
+      }
+      &-icons {
+        width: 50%;
+      }
+    }
+
+    &-center {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .navbar {
+    height: 110px;
+    &-left {
+      padding: 0.2rem 0;
+
+      &-icons {
+        font-size: 1rem;
+      }
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    &-center {
+      padding: 0.5rem 0;
+      font-size: 120%;
+    }
+
+    &-right {
+      font-size: 180%;
+    }
+  }
+}
+@media screen and (max-width: 300px) {
+  .navbar {
+    &-center {
+      font-size: 100%;
+    }
   }
 }
