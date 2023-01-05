@@ -1,0 +1,79 @@
+.single-post {
+  width: 21vw;
+  margin: 1rem 0;
+
+  img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .post-cats {
+      display: flex;
+      color: $color4;
+      font-size: 14px;
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+
+      .post-cat {
+        line-height: 20px;
+        margin: 4px 10px;
+        cursor: pointer;
+      }
+    }
+
+    .post-title {
+      font-size: 1.2rem;
+      margin: 6px 0;
+      font-family: 'Yeon Sung', cursive;
+      text-transform: capitalize;
+    }
+
+    .time-author {
+      width: 100%;
+      margin: 4px 0;
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Yeon Sung', cursive;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: $color3;
+    }
+
+    .text {
+      line-height: 24px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      font-family: 'Patrick Hand', cursive;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .single-post {
+    width: 30vw;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .single-post {
+    width: 60vw;
+    margin: 1rem auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .single-post {
+    img {
+      height: 200px;
+    }
+  }
+}
