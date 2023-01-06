@@ -1,6 +1,7 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-function Login() {
+function Register() {
   return (
     <div className="register">
       <span>Register</span>
@@ -8,7 +9,7 @@ function Login() {
         <label htmlFor="">Username</label>
         <input type="text" placeholder="Username" />
         <label htmlFor="">Email</label>
-        <input type="text" placeholder="D-mail" />
+        <input type="text" placeholder="E-mail" />
         <label htmlFor="">Password</label>
         <input type="password" placeholder="Password" />
         <label htmlFor="">Retype Your Password</label>
@@ -16,10 +17,11 @@ function Login() {
         <button type="submit">Register</button>
       </form>
       <h3>
-        You already have an account. Visit <a href="/#">login</a> page
+        You already have an account. Visit <NavLink to="/login">login</NavLink>{' '}
+        page
       </h3>
     </div>
   );
 }
 
-export default Login;
+export default Register;

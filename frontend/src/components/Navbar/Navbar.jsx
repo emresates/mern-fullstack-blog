@@ -1,15 +1,38 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 function Navbar() {
+  const user = false;
+
   return (
     <div className="navbar">
       <div className="navbar-left">
         <div className="navbar-left-profile">
-          <img
-            src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
-            alt=""
-          />
+          {user ? (
+            <img
+              src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
+              alt=""
+            />
+          ) : (
+            <>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? 'nav-item active' : 'nav-item'
+                }
+                to="/login"
+              >
+                Login
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? 'nav-item active' : 'nav-item'
+                }
+                to="/register"
+              >
+                Register
+              </NavLink>
+            </>
+          )}
           <i className="fa-solid fa-magnifying-glass"></i>
         </div>
         <div className="navbar-left-icons">
@@ -22,26 +45,46 @@ function Navbar() {
       <div className="navbar-center">
         <ul>
           <li>
-            <Link className="nav-item" to="/">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'nav-item active' : 'nav-item'
+              }
+              to="/"
+            >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className="nav-item" to="/about">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'nav-item active' : 'nav-item'
+              }
+              to="/about"
+            >
               About
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className="nav-item" to="/contact">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'nav-item active' : 'nav-item'
+              }
+              to="/contact"
+            >
               Contact
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className="nav-item" to="/write">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'nav-item active' : 'nav-item'
+              }
+              to="/write"
+            >
               Write
-            </Link>
+            </NavLink>
           </li>
-          <li>Logout</li>
+          <li>{user && 'Logout'}</li>
         </ul>
       </div>
       <div className="navbar-right">

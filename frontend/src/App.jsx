@@ -11,19 +11,20 @@ import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 
 function App() {
+  const user = false;
   return (
     <>
       <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="post" element={<SinglePostPage />} />
-        <Route path="write" element={<Write />} />
-        <Route path="settings" element={<Settings />} />
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Register />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/post/:postId" element={<SinglePostPage />} />
+        <Route path="/settings" element={user ? <Settings /> : <Register />} />
+        <Route path="/write" element={user ? <Write /> : <Home />} />
+        <Route path="/login" element={user ? <Home /> : <Login />} />
+        <Route path="/register" element={user ? <Home /> : <Register />} />
       </Routes>
     </>
   );

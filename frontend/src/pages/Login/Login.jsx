@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Login() {
   return (
@@ -12,7 +13,8 @@ function Login() {
         <button type="submit">Login</button>
       </form>
       <h3>
-        Don't you have an account. Visit <a href="/#">register</a> page
+        Don't you have an account. Visit{' '}
+        <NavLink to="/register">register</NavLink> page
       </h3>
     </div>
   );
