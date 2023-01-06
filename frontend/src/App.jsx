@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom';
-import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
 import './styles/main.scss';
 import Home from './pages/Home/Home';
@@ -8,6 +7,8 @@ import Contact from './pages/Contact/Contact';
 import SinglePostPage from './pages/SinglePostPage/SinglePostPage';
 import Write from './pages/Write/Write';
 import Settings from './pages/Settings/Settings';
+import Login from './pages/Login/Login';
+import Register from './pages/Register/Register';
 
 function App() {
   return (
@@ -21,9 +22,9 @@ function App() {
         <Route path="post" element={<SinglePostPage />} />
         <Route path="write" element={<Write />} />
         <Route path="settings" element={<Settings />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
       </Routes>
-
-      <Footer />
     </>
   );
 }
