@@ -36,7 +36,11 @@ function Navbar() {
               Contact
             </Link>
           </li>
-          <li>Write</li>
+          <li>
+            <Link className="nav-item" to="/write">
+              Write
+            </Link>
+          </li>
           <li>Logout</li>
         </ul>
       </div>

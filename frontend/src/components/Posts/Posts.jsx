@@ -1,14 +1,13 @@
 import React from 'react';
-import SinglePost from '../SinglePost/SinglePost';
+import PostCard from '../PostCard/PostCard';
 
 function Posts() {
   return (
     <div className="posts">
-      <SinglePost />
-      <SinglePost />
-      <SinglePost />
-      <SinglePost />
-      <SinglePost />
+      <PostCard />
+      <PostCard />
+      <PostCard />
+      <PostCard />
     </div>
   );
 }

@@ -5,6 +5,8 @@ import './styles/main.scss';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
+import SinglePostPage from './pages/SinglePostPage/SinglePostPage';
+import Write from './pages/Write/Write';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="post" element={<SinglePostPage />} />
+        <Route path="write" element={<Write />} />
       </Routes>
 
       <Footer />

@@ -1,35 +1,73 @@
 import React from 'react';
 
-function SinglePost() {
+function Post() {
   return (
     <div className="single-post">
-      <img
-        src="https://images.unsplash.com/photo-1503980599186-9cc36eda351a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1800&q=80"
-        alt=""
-      />
-      <div className="single-post-info">
-        <div className="post-cats">
-          <span className="post-cat">Music</span>
-          <span className="post-cat">Life</span>
+      <div className="single-post-wrapper">
+        <img
+          src="https://images.unsplash.com/photo-1506962240359-bd03fbba0e3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2065&q=80"
+          alt=""
+        />
+
+        <h1 className="single-post-wrapper-title">
+          Lorem ipsum dolor sit
+          <div className="single-post-wrapper-title-icons">
+            <i className="fa-regular fa-pen-to-square"></i>
+            <i className="fa-regular fa-trash-can"></i>
+          </div>
+        </h1>
+        <div className="single-post-wrapper-info">
+          <span>
+            Author: <b>Emre Ates</b>
+          </span>
+          <span>
+            <i>1 hour ago</i>
+          </span>
         </div>
-        <span className="post-title">aasd asdkasdj Lorem ipsum dolor sit.</span>
-        <div className="time-author">
-          <span className="author">Emre Ates</span>
-          <span className="time">1 hour ago</span>
-        </div>
-        <p className="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-          hic praesentium eligendi debitis earum. Molestiae et inventore
-          exercitationem nobis delectus. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Blanditiis hic praesentium eligendi debitis earum.
-          Molestiae et inventore exercitationem nobis delectus. Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Blanditiis hic
-          praesentium eligendi debitis earum. Molestiae et inventore
-          exercitationem nobis delectus.
+        <p className="single-post-wrapper-text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia cum
+          quae earum ea ab fugit quas corrupti velit recusandae. Debitis eveniet
+          repudiandae ullam incidunt temporibus, sunt laboriosam minima odio
+          asperiores? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Mollitia cum quae earum ea ab fugit quas corrupti velit recusandae.
+          Debitis eveniet repudiandae ullam incidunt temporibus, sunt laboriosam
+          minima odio asperiores? Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit. Mollitia cum quae earum ea ab fugit quas corrupti
+          velit recusandae. Debitis eveniet repudiandae ullam incidunt
+          temporibus, sunt laboriosam minima odio asperiores? Lorem ipsum dolor
+          sit amet consectetur, adipisicing elit. Mollitia cum quae earum ea ab
+          fugit quas corrupti velit recusandae. Debitis eveniet repudiandae
+          ullam incidunt temporibus, sunt laboriosam minima odio asperiores?
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia cum
+          quae earum ea ab fugit quas corrupti velit recusandae. Debitis eveniet
+          repudiandae ullam incidunt temporibus, sunt laboriosam minima odio
+          asperiores? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Mollitia cum quae earum ea ab fugit quas corrupti velit recusandae.
+          Debitis eveniet repudiandae ullam incidunt temporibus, sunt laboriosam
+          minima odio asperiores? Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit. Mollitia cum quae earum ea ab fugit quas corrupti
+          velit recusandae. Debitis eveniet repudiandae ullam incidunt
+          temporibus, sunt laboriosam minima odio asperiores? Lorem ipsum dolor
+          sit amet consectetur, adipisicing elit. Mollitia cum quae earum ea ab
+          fugit quas corrupti velit recusandae. Debitis eveniet repudiandae
+          ullam incidunt temporibus, sunt laboriosam minima odio asperiores?
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia cum
+          quae earum ea ab fugit quas corrupti velit recusandae. Debitis eveniet
+          repudiandae ullam incidunt temporibus, sunt laboriosam minima odio
+          asperiores? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Mollitia cum quae earum ea ab fugit quas corrupti velit recusandae.
+          Debitis eveniet repudiandae ullam incidunt temporibus, sunt laboriosam
+          minima odio asperiores? Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit. Mollitia cum quae earum ea ab fugit quas corrupti
+          velit recusandae. Debitis eveniet repudiandae ullam incidunt
+          temporibus, sunt laboriosam minima odio asperiores? Lorem ipsum dolor
+          sit amet consectetur, adipisicing elit. Mollitia cum quae earum ea ab
+          fugit quas corrupti velit recusandae. Debitis eveniet repudiandae
+          ullam incidunt temporibus, sunt laboriosam minima odio asperiores?
         </p>
       </div>
     </div>
   );
 }
 
-export default SinglePost;
+export default Post;
