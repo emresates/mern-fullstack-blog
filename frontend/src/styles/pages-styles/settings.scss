@@ -1,0 +1,82 @@
+.settings {
+  display: flex;
+
+  &-wrapper {
+    flex: 9;
+    padding: 1.4rem;
+
+    .settings-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      span {
+        &:first-child {
+          font-size: 2rem;
+          margin-bottom: 20px;
+          color: $color4;
+        }
+
+        &:last-child {
+          font-size: 1.2rem;
+          margin-bottom: 20px;
+          color: red;
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 1.4rem;
+        margin-top: 1.4rem;
+      }
+
+      input {
+        color: $color6;
+        margin: 10px 0;
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid $color3;
+        background-color: transparent;
+      }
+
+      button {
+        width: 10rem;
+        align-self: center;
+        padding: 5px;
+        border-radius: 10px;
+        background-color: $color6;
+        color: $color1;
+        cursor: pointer;
+      }
+
+      .settingsPP {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+        img {
+          width: 70px;
+          height: 70px;
+          border-radius: 20px;
+          object-fit: cover;
+        }
+
+        i {
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          background-color: $color4;
+          color: $color1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
