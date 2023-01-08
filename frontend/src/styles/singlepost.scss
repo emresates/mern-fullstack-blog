@@ -42,6 +42,11 @@
       font-family: 'Yeon Sung', cursive;
       font-size: 1.2rem;
       color: $color6;
+      span {
+        .author {
+          color: $color6;
+        }
+      }
     }
 
     &-text {
