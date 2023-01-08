@@ -41,6 +41,11 @@
       color: $color1;
       padding: 5px;
       border-radius: 10px;
+
+      &:disabled {
+        background-color: $color3;
+        cursor: not-allowed;
+      }
     }
   }
   h3 {
