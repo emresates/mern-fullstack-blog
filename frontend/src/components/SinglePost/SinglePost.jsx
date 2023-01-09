@@ -90,7 +90,10 @@ function Post() {
             onChange={(e) => setDesc(e.target.value)}
           />
         ) : (
-          <p className="single-post-wrapper-text">{desc}</p>
+          <p
+            className="single-post-wrapper-text"
+            dangerouslySetInnerHTML={{ __html: desc }}
+          />
         )}
         {updateMode && (
           <button className="update-button" onClick={handleUpdate}>
