@@ -1,18 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { Context } from '../../context/Context';
 
 function Navbar() {
-  const user = false;
+  const { user, dispatch } = useContext(Context);
+
+  const handleLogout = () => {
+    dispatch({ type: 'LOGOUT' });
+  };
 
   return (
     <div className="navbar">
       <div className="navbar-left">
         <div className="navbar-left-profile">
           {user ? (
-            <img
-              src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
-              alt=""
-            />
+            user.profilePic ? (
+              <img src={user.profilePic} alt="" />
+            ) : (
+              <img
+                src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80"
+                alt=""
+              />
+            )
           ) : (
             <>
               <NavLink
@@ -84,7 +93,11 @@ function Navbar() {
               Write
             </NavLink>
           </li>
-          <li>{user && 'Logout'}</li>
+          <li>
+            <Link className="nav-item" onClick={handleLogout}>
+              {user && 'Logout'}
+            </Link>
+          </li>
         </ul>
       </div>
       <div className="navbar-right">
