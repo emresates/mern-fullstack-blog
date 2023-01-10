@@ -43,13 +43,24 @@ function Settings() {
     }
   };
 
+  const handleDelete = async () => {
+    try {
+      await axios.delete(`/users/${user._id}`, {
+        data: { userId: user._id },
+      });
+      window.location.replace('/');
+    } catch (err) {}
+  };
+
   return (
     <div className="settings">
       <Sidebar />
       <div className="settings-wrapper">
         <div className="settings-title">
           <span>Update Your Account</span>
-          <span>Delete Your Account</span>
+          <span style={{ cursor: 'pointer' }} onClick={handleDelete}>
+            Delete Your Account
+          </span>
         </div>
         <form onSubmit={handleSubmit}>
           <label htmlFor="">Profile Picture</label>
