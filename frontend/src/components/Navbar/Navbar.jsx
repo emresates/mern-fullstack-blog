@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Context } from '../../context/Context';
 
@@ -10,8 +10,39 @@ function Navbar() {
     dispatch({ type: 'LOGOUT' });
   };
 
+  //* Hide scrollbar when scroll down
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  var controlNavbar = () => {
+    if (typeof window !== 'undefined') {
+      if (window.scrollY > lastScrollY) {
+        //* if scroll down hide the navbar
+        setShow(false);
+      } else {
+        //* if scroll up show the navbar
+        setShow(true);
+      }
+
+      //* remember current page location to use in the next move
+      setLastScrollY(window.scrollY);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar);
+
+      // cleanup function
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
+  //* End of the scroll functions
+
   return (
-    <div className="navbar">
+    <div className={`navbar ${!show && 'hidden'}`}>
       <div className="navbar-left">
         <div className="navbar-left-profile">
           {user ? (
