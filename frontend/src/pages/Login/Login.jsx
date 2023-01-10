@@ -28,7 +28,12 @@ function Login() {
       <span>Login</span>
       <form action="" onSubmit={handleSubmit}>
         <label htmlFor="">Username</label>
-        <input type="text" placeholder="Your username..." ref={userRef} />
+        <input
+          type="text"
+          placeholder="Your username..."
+          ref={userRef}
+          autoFocus
+        />
         <label htmlFor="">Password</label>
         <input type="password" placeholder="Your password" ref={passwordRef} />
         <button type="submit" disabled={isFetching}>

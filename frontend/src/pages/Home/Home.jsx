@@ -20,7 +20,11 @@ function Home() {
   }, [search]);
   return (
     <>
-      <Header />
+      <Header
+        page="Home"
+        image="https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1973&q=80"
+        slogan="Your Blogging Platform"
+      />
       <div className="home">
         <Sidebar />
         <Posts posts={posts} />

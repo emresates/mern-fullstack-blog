@@ -14,7 +14,7 @@ function Sidebar() {
   }, []);
   return (
     <div className="sidebar">
-      <div className="sidebar-item">
+      {/* <div className="sidebar-item">
         <span className="sidebar-item-title">Categories</span>
         <ul>
           {cats.map((c, key) => (
@@ -23,7 +23,7 @@ function Sidebar() {
             </Link>
           ))}
         </ul>
-      </div>
+      </div> */}
 
       <div className="sidebar-item">
         <span className="sidebar-item-title">Subscribe</span>

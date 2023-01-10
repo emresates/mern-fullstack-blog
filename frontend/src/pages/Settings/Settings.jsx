@@ -48,7 +48,7 @@ function Settings() {
       await axios.delete(`/users/${user._id}`, {
         data: { userId: user._id },
       });
-      window.location.replace('/');
+      dispatch({ type: 'LOGOUT' });
     } catch (err) {}
   };
 

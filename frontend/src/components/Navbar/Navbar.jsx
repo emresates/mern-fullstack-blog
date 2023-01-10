@@ -119,16 +119,24 @@ function Navbar() {
               Contact
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? 'nav-item active' : 'nav-item'
-              }
-              to="/write"
-            >
-              Write
-            </NavLink>
-          </li>
+          {user ? (
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? 'nav-item active' : 'nav-item'
+                }
+                to="/write"
+              >
+                Write
+              </NavLink>
+            </li>
+          ) : (
+            <li>
+              <Link className="nav-item " to="/Login">
+                Write
+              </Link>
+            </li>
+          )}
           <li>
             <Link className="nav-item" onClick={handleLogout}>
               {user && 'Logout'}
