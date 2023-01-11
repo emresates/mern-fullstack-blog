@@ -8,6 +8,8 @@ function Write() {
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
 
+  const url = 'https://test-backend.adaptable.app/backend';
+
   //! Adding a post with photo
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,12 +27,13 @@ function Write() {
       data.append('file', file);
       newPost.photo = filename;
       try {
-        await axios.post('/upload', data);
+        await axios.post(url + '/upload', data);
       } catch (err) {}
     }
     try {
-      const res = await axios.post('/posts', newPost);
-      window.location.replace('/post/' + res.data._id);
+      const res = await axios.post(url + '/posts', newPost);
+      window.location.replace(url + '/post/' + res.data._id);
+      console.log(res);
     } catch (err) {}
   };
 

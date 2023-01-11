@@ -9,11 +9,13 @@ function Login() {
 
   const { dispatch, isFetching } = useContext(Context);
 
+  const url = 'https://test-backend.adaptable.app/backend';
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch({ type: 'LOGIN_START' });
     try {
-      const res = await axios.post('/auth/login', {
+      const res = await axios.post(url + '/auth/login', {
         username: userRef.current.value,
         password: passwordRef.current.value,
       });

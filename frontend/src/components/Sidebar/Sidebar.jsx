@@ -5,13 +5,15 @@ import { Link } from 'react-router-dom';
 function Sidebar() {
   const [cats, setCats] = useState([]);
 
+  const url = 'https://test-backend.adaptable.app/backend';
   useEffect(() => {
     const getCats = async () => {
-      const res = await axios.get('/categories');
+      const res = await axios.get(url + '/categories');
       setCats(res.data);
     };
     getCats();
   }, []);
+
   return (
     <div className="sidebar">
       <div className="sidebar-item">
