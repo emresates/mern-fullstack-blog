@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function PostCard({ post }) {
-  const PF = process.env.REACT_APP_IMAGES_PATH;
+  const PF = 'https://backendapp.adaptable.app/images/';
   return (
     <div className="post-card">
       {post.photo ? (

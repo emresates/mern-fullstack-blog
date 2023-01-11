@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
-
 import { Link, useLocation } from 'react-router-dom';
 import { Context } from '../../context/Context';
 
@@ -9,12 +8,10 @@ function Post() {
   const path = location.pathname.split('/')[2];
   const { user } = useContext(Context);
   const [post, setPost] = useState({});
-  const PF = process.env.REACT_APP_IMAGES_PATH;
+  const PF = 'https://backendapp.adaptable.app/images/';
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
   const [updateMode, setUpdateMode] = useState(false);
-
-  console.log(PF);
 
   useEffect(() => {
     const getPost = async () => {
