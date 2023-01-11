@@ -10,11 +10,11 @@ function Home() {
   const [posts, setPosts] = useState([]);
   const { search } = useLocation();
 
-  // const url = 'https://app-backend.adaptable.app/backend/posts';
-
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get('/posts' + search);
+      const res = await axios.get('/posts' + search).catch((error) => {
+        console.log(error);
+      });
       setPosts(res.data);
       console.log(res.data);
     };
